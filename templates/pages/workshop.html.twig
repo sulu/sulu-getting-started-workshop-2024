@@ -6,12 +6,6 @@
             <h1 class="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">{{ content.headline|default(content.title) }}</h1>
         </div>
 
-        {% if (content.header_image) %}
-            <div class="mt-8 flow-root sm:mt-12">
-                {{ get_image(content.header_image, { src: '1200x', class: 'rounded-md shadow-2xl ring-1 ring-gray-900/10' }) }}
-            </div>
-        {% endif %}
-
         {% if (content.introduction) %}
             <div class="mx-auto max-w-4xl text-center">
                 <p class="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">{{ content.introduction|raw }}</p>
@@ -19,11 +13,7 @@
         {% endif %}
     </div>
 
-    {% for block in content.blocks %}
-        {% include 'blocks/' ~ block.type ~ '.html.twig' with {
-            content: block,
-            view: view.blocks[loop.index0],
-            index: loop.index,
-        } %}
-    {% endfor %}
+    <div class="mx-auto max-w-7xl px-3 py-12 sm:pt-16 lg:px-4 lg:py-20 prose">
+        {{ content.description|raw }}
+    </div>
 {% endblock %}

@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>workshop</key>
+
+    <view>pages/workshop</view>
+    <controller>Sulu\Bundle\WebsiteBundle\Controller\DefaultController::indexAction</controller>
+    <cacheLifetime>604800</cacheLifetime>
+
+    <meta>
+        <title lang="en">Workshop</title>
+        <title lang="de">Workshop</title>
+    </meta>
+
+    <properties>
+        <property name="title" type="text_line" mandatory="true">
+            <meta>
+                <title lang="en">Title</title>
+                <title lang="de">Titel</title>
+            </meta>
+
+            <params>
+                <param name="headline" value="true"/>
+            </params>
+
+            <tag name="sulu.rlp.part"/>
+        </property>
+
+        <property name="url" type="resource_locator" mandatory="true">
+            <meta>
+                <title lang="en">Resourcelocator</title>
+                <title lang="de">Adresse</title>
+            </meta>
+
+            <tag name="sulu.rlp"/>
+        </property>
+
+        <section name="header">
+            <meta>
+                <title lang="en">Header</title>
+                <title lang="de">Header</title>
+            </meta>
+            <properties>
+                <property name="headline" type="text_line">
+                    <meta>
+                        <title lang="en">Headline</title>
+                        <title lang="de">Headline</title>
+                    </meta>
+                </property>
+
+                <property name="introduction" type="text_editor">
+                    <meta>
+                        <title lang="en">Introduction</title>
+                        <title lang="de">Einleitung</title>
+                    </meta>
+                </property>
+            </properties>
+        </section>
+
+        <section name="content">
+            <meta>
+                <title lang="en">Content</title>
+                <title lang="de">Inhalt</title>
+            </meta>
+            <properties>
+                <property name="description" type="text_editor">
+                    <meta>
+                        <title lang="en">Description</title>
+                        <title lang="de">Beschreibung</title>
+                    </meta>
+                </property>
+                <property name="trainer" type="single_contact_selection">
+                    <meta>
+                        <title lang="en">Trainer</title>
+                        <title lang="de">Trainer</title>
+                    </meta>
+                </property>
+            </properties>
+        </section>
+
+    </properties>
+</template>

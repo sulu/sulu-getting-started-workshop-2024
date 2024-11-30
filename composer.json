@@ -40,6 +40,7 @@
         "scheb/2fa-trusted-device": "^7.2",
         "stof/doctrine-extensions-bundle": "^1.11",
         "sulu/sulu": "~2.6.6",
+        "sulu/web-twig": "^2.6",
         "symfony/config": "^7.1",
         "symfony/dotenv": "^7.1",
         "symfony/flex": "^1.17 || ^2.0",
