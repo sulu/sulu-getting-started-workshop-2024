@@ -9,8 +9,8 @@ framework:
     session:
         name: SULUSESSID # This avoids conflicts with other applications running on the same domain
 
-    #esi: true
-    #fragments: true
+    esi: true
+    fragments: true
 
 when@test:
     framework:

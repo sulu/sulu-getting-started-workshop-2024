@@ -57,6 +57,9 @@
                 <environment type="prod">
                     <urls>
                         <url>con.symfony.com/{localization}</url>
+
+                        <!-- for development purposes -->
+                        <url>con.symfony.lo/{localization}</url>
                     </urls>
                 </environment>
                 <environment type="stage">
