@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-4xl text-center">
+            <h1 class="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">{{ content.headline|default(content.title) }}</h1>
+        </div>
+
+        {% if (content.introduction) %}
+            <div class="mx-auto max-w-4xl text-center">
+                <p class="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">{{ content.introduction|raw }}</p>
+            </div>
+        {% endif %}
+    </div>
+
+    {% if (content.description) %}
+        <div class="mx-auto max-w-7xl px-3 py-12 sm:pt-16 lg:px-4 lg:py-20 prose">
+            {{ content.description|raw }}
+        </div>
+    {% endif %}
+
+    <div class="mx-auto max-w-7xl px-3 py-12 sm:pt-16 lg:px-4 lg:py-20">
+        <ul role="list" class="space-y-6">
+            {% for item in schedule %}
+                <li class="relative flex gap-x-4">
+                    <div class="absolute -bottom-6 left-0 top-0 flex w-6 justify-center">
+                        <div class="w-px bg-gray-200"></div>
+                    </div>
+                    <div class="relative flex size-6 flex-none items-center justify-center bg-white">
+                        <div class="size-1.5 rounded-full bg-gray-100 ring-1 ring-gray-300"></div>
+                    </div>
+                    <time class="flex-none py-0.5 text-s/5 text-gray-500">{{ item.from }} - {{ item.to }}</time>
+                    <p class="flex-auto py-0.5 text-s/5 text-gray-500"><span class="font-medium text-gray-900">
+                            {{ item.name }}</span><br/>{{ item.speaker }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
