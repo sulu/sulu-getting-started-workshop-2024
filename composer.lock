@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d6b8f78f9ffdd418e4ea2ceb89745c32",
+    "content-hash": "09e790deaba15359473fcbad105ee23a",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -5791,6 +5791,71 @@
                 "source": "https://github.com/stof/StofDoctrineExtensionsBundle/tree/v1.12.0"
             },
             "time": "2024-06-10T12:27:27+00:00"
+        },
+        {
+            "name": "sulu/headless-bundle",
+            "version": "0.10.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sulu/SuluHeadlessBundle.git",
+                "reference": "ed7e5abab841d5924237e7aadbda0beac1c9eae7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sulu/SuluHeadlessBundle/zipball/ed7e5abab841d5924237e7aadbda0beac1c9eae7",
+                "reference": "ed7e5abab841d5924237e7aadbda0beac1c9eae7",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3 || ^8.0",
+                "sulu/sulu": "^2.4 || ^2.5@dev",
+                "symfony/config": "^4.4 || ^5.4 || ^6.3 || ^7.0",
+                "symfony/dependency-injection": "^4.4 || ^5.4 || ^6.3 || ^7.0",
+                "symfony/framework-bundle": "^4.4 || ^5.4 || ^6.3 || ^7.0",
+                "symfony/http-foundation": "^4.4 || ^5.4 || ^6.3 || ^7.0",
+                "symfony/http-kernel": "^4.4 || ^5.4 || ^6.3 || ^7.0"
+            },
+            "conflict": {
+                "doctrine/orm": "< 2.6.3",
+                "zendframework/zend-code": "< 3.3.1"
+            },
+            "require-dev": {
+                "coduo/php-matcher": "^5.0 || ^6.0",
+                "handcraftedinthealps/code-coverage-checker": "^0.2.1",
+                "handcraftedinthealps/zendsearch": "^2.0",
+                "jackalope/jackalope-doctrine-dbal": "^1.3.4 || ^2.0",
+                "jangregor/phpstan-prophecy": "^1.0",
+                "php-cs-fixer/shim": "^3.0",
+                "phpspec/prophecy": "^1.8",
+                "phpspec/prophecy-phpunit": "^2.0",
+                "phpstan/phpstan": "^1.0",
+                "phpstan/phpstan-doctrine": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "phpstan/phpstan-symfony": "^1.0",
+                "phpunit/phpunit": "^9.6 || ^10.0",
+                "symfony/browser-kit": "^4.4 || ^5.4 || ^6.3 || ^7.0",
+                "symfony/console": "^4.4 || ^5.4 || ^6.3 || ^7.0",
+                "symfony/dotenv": "^4.4 || ^5.4 || ^6.3 || ^7.0",
+                "symfony/error-handler": "^4.4 || ^5.4 || ^6.3 || ^7.0",
+                "symfony/monolog-bundle": "^3.1",
+                "thecodingmachine/phpstan-strict-rules": "^1.0"
+            },
+            "type": "sulu-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Sulu\\Bundle\\HeadlessBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Bundle that provides controllers and services for using Sulu as headless content management system",
+            "support": {
+                "issues": "https://github.com/sulu/SuluHeadlessBundle/issues",
+                "source": "https://github.com/sulu/SuluHeadlessBundle/tree/0.10.4"
+            },
+            "time": "2024-10-21T12:14:12+00:00"
         },
         {
             "name": "sulu/sulu",
