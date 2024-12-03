@@ -20,6 +20,7 @@
                 <title lang="en">Title</title>
                 <title lang="de">Titel</title>
             </meta>
+
             <params>
                 <param name="headline" value="true"/>
             </params>
@@ -34,6 +35,13 @@
             </meta>
 
             <tag name="sulu.rlp"/>
+        </property>
+
+        <property name="introduction" type="text_editor">
+            <meta>
+                <title lang="en">Introduction</title>
+                <title lang="de">Einleitung</title>
+            </meta>
         </property>
 
         <property name="article" type="text_editor">

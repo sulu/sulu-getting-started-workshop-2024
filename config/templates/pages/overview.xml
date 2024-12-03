@@ -1,0 +1,107 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>overview</key>
+
+    <view>pages/overview</view>
+    <controller>Sulu\Bundle\WebsiteBundle\Controller\DefaultController::indexAction</controller>
+    <cacheLifetime>604800</cacheLifetime>
+
+    <meta>
+        <title lang="en">Overview</title>
+        <title lang="de">Übersicht</title>
+    </meta>
+
+    <properties>
+        <property name="title" type="text_line" mandatory="true">
+            <meta>
+                <title lang="en">Title</title>
+                <title lang="de">Titel</title>
+            </meta>
+
+            <params>
+                <param name="headline" value="true"/>
+            </params>
+
+            <tag name="sulu.rlp.part"/>
+        </property>
+
+        <property name="url" type="resource_locator" mandatory="true">
+            <meta>
+                <title lang="en">Resourcelocator</title>
+                <title lang="de">Adresse</title>
+            </meta>
+
+            <tag name="sulu.rlp"/>
+        </property>
+
+        <section name="header">
+            <meta>
+                <title lang="en">Header</title>
+                <title lang="de">Header</title>
+            </meta>
+            <properties>
+                <property name="headline" type="text_line">
+                    <meta>
+                        <title lang="en">Headline</title>
+                        <title lang="de">Headline</title>
+                    </meta>
+                </property>
+
+                <property name="header_image" type="single_media_selection">
+                    <meta>
+                        <title lang="en">Header Image</title>
+                        <title lang="de">Header Bild</title>
+                    </meta>
+                    <params>
+                        <param name="types" value="image"/>
+                    </params>
+                </property>
+
+                <property name="introduction" type="text_editor">
+                    <meta>
+                        <title lang="en">Introduction</title>
+                        <title lang="de">Einleitung</title>
+                    </meta>
+                </property>
+            </properties>
+        </section>
+
+        <section name="content">
+            <meta>
+                <title lang="en">Content</title>
+                <title lang="de">Inhalt</title>
+            </meta>
+            <properties>
+                <property name="pages" type="smart_content">
+                    <meta>
+                        <title lang="en">Pages</title>
+                        <title lang="de">Seiten</title>
+                    </meta>
+                    <params>
+                        <param name="provider" value="pages"/>
+
+                        <param name="properties" type="collection">
+                            <param name="introduction" value="introduction"/>
+                            <param name="trainer" value="trainer"/>
+                            <param name="excerptTitle" value="excerpt.title"/>
+                            <param name="excerptTags" value="excerpt.tags"/>
+                            <param name="excerptImages" value="excerpt.images"/>
+                            <param name="excerptDescription" value="excerpt.description"/>
+                        </param>
+                    </params>
+                </property>
+
+                <property name="teasers" type="teaser_selection">
+                    <meta>
+                        <title lang="en">Teasers</title>
+                        <title lang="en">Teasers</title>
+                    </meta>
+                </property>
+            </properties>
+        </section>
+
+    </properties>
+</template>

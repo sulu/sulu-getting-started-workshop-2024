@@ -20,6 +20,7 @@
                 <title lang="en">Title</title>
                 <title lang="de">Titel</title>
             </meta>
+
             <params>
                 <param name="headline" value="true"/>
             </params>
@@ -36,11 +37,150 @@
             <tag name="sulu.rlp"/>
         </property>
 
-        <property name="article" type="text_editor">
+        <section name="header">
             <meta>
-                <title lang="en">Article</title>
-                <title lang="de">Artikel</title>
+                <title lang="en">Header</title>
+                <title lang="de">Header</title>
             </meta>
-        </property>
+            <properties>
+                <property name="headline" type="text_line">
+                    <meta>
+                        <title lang="en">Headline</title>
+                        <title lang="de">Headline</title>
+                    </meta>
+                </property>
+
+                <property name="header_image" type="single_media_selection">
+                    <meta>
+                        <title lang="en">Header Image</title>
+                        <title lang="de">Header Bild</title>
+                    </meta>
+                    <params>
+                        <param name="types" value="image"/>
+                    </params>
+                </property>
+
+                <property name="introduction" type="text_editor">
+                    <meta>
+                        <title lang="en">Introduction</title>
+                        <title lang="de">Einleitung</title>
+                    </meta>
+                </property>
+            </properties>
+        </section>
+
+        <section name="content">
+            <meta>
+                <title lang="en">Content</title>
+                <title lang="de">Inhalt</title>
+            </meta>
+            <properties>
+                <block name="blocks" default-type="text_image">
+                    <types>
+                        <type ref="text_image"/>
+
+                        <type ref="gallery"/>
+
+                        <type name="faq">
+                            <meta>
+                                <title lang="en">FAQ</title>
+                                <title lang="de">FAQ</title>
+                            </meta>
+
+                            <properties>
+                                <property name="title" type="text_line">
+                                    <meta>
+                                        <title lang="en">Title</title>
+                                        <title lang="de">Titel</title>
+                                    </meta>
+                                </property>
+
+                                <property name="opening" type="text_editor">
+                                    <meta>
+                                        <title lang="en">Article</title>
+                                        <title lang="de">Artikel</title>
+                                    </meta>
+                                </property>
+
+                                <block name="questions">
+                                    <types>
+                                        <type name="question">
+                                            <properties>
+                                                <property name="question" type="text_line">
+                                                    <meta>
+                                                        <title lang="en">Question</title>
+                                                        <title lang="de">Frage</title>
+                                                    </meta>
+                                                </property>
+
+                                                <property name="answer" type="text_area">
+                                                    <meta>
+                                                        <title lang="en">Answer</title>
+                                                        <title lang="de">Antwort</title>
+                                                    </meta>
+                                                </property>
+                                            </properties>
+                                        </type>
+                                    </types>
+                                </block>
+                            </properties>
+                        </type>
+
+                        <type name="venue">
+                            <meta>
+                                <title lang="en">Venue</title>
+                                <title lang="de">Veranstaltungsort</title>
+                            </meta>
+
+                            <properties>
+                                <property name="title" type="text_line">
+                                    <meta>
+                                        <title lang="en">Title</title>
+                                        <title lang="de">Titel</title>
+                                    </meta>
+                                </property>
+
+                                <property name="image_map" type="image_map" default-type="hotspot">
+                                    <meta>
+                                        <title lang="en">Map</title>
+                                        <title lang="de">Map</title>
+                                    </meta>
+
+                                    <types>
+                                        <type name="hotspot">
+                                            <meta>
+                                                <title lang="en">Hotspot</title>
+                                                <title lang="de">Hotspot</title>
+                                            </meta>
+                                            <properties>
+                                                <property name="title" type="text_line">
+                                                    <meta>
+                                                        <title lang="en">Title</title>
+                                                        <title lang="de">Titel</title>
+                                                    </meta>
+                                                </property>
+                                                <property name="description" type="text_area">
+                                                    <meta>
+                                                        <title lang="en">Description</title>
+                                                        <title lang="de">Beschreibung</title>
+                                                    </meta>
+                                                </property>
+                                                <property name="link" type="link">
+                                                    <meta>
+                                                        <title lang="en">Link</title>
+                                                        <title lang="de">Link</title>
+                                                    </meta>
+                                                </property>
+                                            </properties>
+                                        </type>
+                                    </types>
+                                </property>
+                            </properties>
+                        </type>
+                    </types>
+                </block>
+            </properties>
+        </section>
+
     </properties>
 </template>
