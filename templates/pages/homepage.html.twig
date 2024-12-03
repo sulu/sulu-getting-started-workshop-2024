@@ -11,4 +11,8 @@
     <div class="mx-auto max-w-7xl px-3 py-12 sm:pt-16 lg:px-4 lg:py-20 prose">
         {{ content.article|raw }}
     </div>
+
+    <div class="mx-auto max-w-7xl px-3 py-12 sm:pt-16 lg:px-4 lg:py-20">
+        {{ render_esi(controller('App\\Controller\\Website\\TimestampController::now')) }}
+    </div>
 {% endblock %}
